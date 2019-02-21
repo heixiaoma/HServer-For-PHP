@@ -1,0 +1,407 @@
+2019-02-21 14:05:00 pid:1 Error: Class 'HDb' not found in F:\PHP\HServer\hserver\HWebServer.php:30
+Stack trace:
+#0 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#1 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#2 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #17)
+#3 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#5 F:\PHP\HServer\hserver\HWebServer.php(45): Workerman\Worker->run()
+#6 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#9 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#10 {main}
+2019-02-21 14:05:00 pid:1 Worker process terminated
+2019-02-21 14:16:07 pid:1 Error: Class 'Workerman\MySQL\Connection' not found in F:\PHP\HServer\hserver\config\HDb.php:25
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(31): HDb::getInstance()
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(46): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 14:16:07 pid:1 Worker process terminated
+2019-02-21 14:17:07 pid:1 Error: Class 'Workerman\MySQL\Connection' not found in F:\PHP\HServer\hserver\config\HDb.php:25
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(31): HDb::getInstance()
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(46): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 14:17:07 pid:1 Worker process terminated
+2019-02-21 16:18:02 pid:1 Error: Class 'WebWorker\Libs\Redis' not found in F:\PHP\HServer\hserver\config\HRedis.php:26
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(33): WebWorker\Libs\HRedis::getInstance()
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(49): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 16:18:02 pid:1 Worker process terminated
+2019-02-21 17:37:55 pid:1 ReflectionException: Class index does not exist in F:\PHP\HServer\hserver\HWebServer.php:31
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(31): ReflectionClass->__construct('index')
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(53): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 17:37:55 pid:1 Worker process terminated
+2019-02-21 17:38:53 pid:1 ReflectionException: Class /hserver/app/index does not exist in F:\PHP\HServer\hserver\HWebServer.php:31
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(31): ReflectionClass->__construct('/hserver/app/in...')
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(53): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 17:38:53 pid:1 Worker process terminated
+2019-02-21 17:39:58 pid:1 ReflectionException: Class ../../../hserver/app/index does not exist in F:\PHP\HServer\hserver\HWebServer.php:31
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(31): ReflectionClass->__construct('../../../hserve...')
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(53): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 17:39:58 pid:1 Worker process terminated
+2019-02-21 17:40:49 pid:1 ReflectionException: Class index does not exist in F:\PHP\HServer\hserver\HWebServer.php:31
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(31): ReflectionClass->__construct('index')
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(53): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 17:40:49 pid:1 Worker process terminated
+2019-02-21 17:41:04 pid:1 ReflectionException: Class ./index does not exist in F:\PHP\HServer\hserver\HWebServer.php:31
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(31): ReflectionClass->__construct('./index')
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(53): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 17:41:04 pid:1 Worker process terminated
+2019-02-21 17:42:17 pid:1 Error: Class 'HWebServer\ReflectionClass' not found in F:\PHP\HServer\hserver\HWebServer.php:31
+Stack trace:
+#0 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#1 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#2 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#3 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#5 F:\PHP\HServer\hserver\HWebServer.php(53): Workerman\Worker->run()
+#6 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#9 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#10 {main}
+2019-02-21 17:42:17 pid:1 Worker process terminated
+2019-02-21 17:42:30 pid:1 ReflectionException: Class index does not exist in F:\PHP\HServer\hserver\HWebServer.php:31
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(31): ReflectionClass->__construct('index')
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(53): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 17:42:30 pid:1 Worker process terminated
+2019-02-21 17:42:55 pid:1 Worker process terminated with ERROR: E_COMPILE_ERROR "Cannot declare class HWebServer\index, because the name is already in use in F:\PHP\HServer\hserver\index.php on line 12"
+2019-02-21 17:43:14 pid:1 Worker process terminated with ERROR: E_COMPILE_ERROR "Cannot declare class HWebServer\index, because the name is already in use in F:\PHP\HServer\hserver\index.php on line 12"
+2019-02-21 17:43:46 pid:1 ReflectionException: Class HWebServer\index does not exist in F:\PHP\HServer\hserver\HWebServer.php:32
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(32): ReflectionClass->__construct('HWebServer\\inde...')
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(54): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 17:43:46 pid:1 Worker process terminated
+2019-02-21 17:51:07 pid:1 Worker process terminated with ERROR: E_ERROR "Class 'HAction' not found in F:\PHP\HServer\app\action\index.php on line 9"
+2019-02-21 17:51:46 pid:1 Worker process terminated with ERROR: E_ERROR "Class 'HAction' not found in F:\PHP\HServer\app\action\index.php on line 9"
+2019-02-21 17:54:24 pid:1 Worker process terminated with ERROR: E_ERROR "Class 'HAction' not found in F:\PHP\HServer\app\action\index.php on line 9"
+2019-02-21 17:55:22 pid:1 Error: Class 'HDb' not found in F:\PHP\HServer\hserver\core\HAction.php:22
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(42): HAction->__construct()
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(57): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 17:55:22 pid:1 Worker process terminated
+2019-02-21 17:55:43 pid:1 Worker process terminated with ERROR: E_ERROR "Class 'HAction' not found in F:\PHP\HServer\app\action\index.php on line 10"
+2019-02-21 17:56:02 pid:1 Error: Class 'HDb' not found in F:\PHP\HServer\hserver\core\HAction.php:22
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(42): HAction->__construct()
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(57): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 17:56:02 pid:1 Worker process terminated
+2019-02-21 17:57:52 pid:1 Error: Class 'HDb' not found in F:\PHP\HServer\hserver\core\HAction.php:22
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(42): HAction->__construct()
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(57): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 17:57:52 pid:1 Worker process terminated
+2019-02-21 17:58:19 pid:1 Error: Class 'WebWorker\Libs\HDb' not found in F:\PHP\HServer\hserver\core\HAction.php:23
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(42): HAction->__construct()
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(57): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 17:58:19 pid:1 Worker process terminated
+2019-02-21 17:59:17 pid:1 Error: Class 'WebWorker\Libs\HDb' not found in F:\PHP\HServer\hserver\core\HAction.php:23
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(42): HAction->__construct()
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(57): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 17:59:17 pid:1 Worker process terminated
+2019-02-21 18:00:53 pid:1 Error: Class 'WebWorker\Libs\HDb' not found in F:\PHP\HServer\hserver\core\HAction.php:23
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(42): HAction->__construct()
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(57): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 18:00:53 pid:1 Worker process terminated
+2019-02-21 18:02:05 pid:1 Worker process terminated with ERROR: E_ERROR "Class 'HAction' not found in F:\PHP\HServer\app\action\index.php on line 9"
+2019-02-21 18:02:38 pid:1 Worker process terminated with ERROR: E_ERROR "Class 'HWebServer\HAction' not found in F:\PHP\HServer\app\action\index.php on line 9"
+2019-02-21 18:02:51 pid:1 Worker process terminated with ERROR: E_ERROR "Class 'HWebServer\HAction' not found in F:\PHP\HServer\app\action\index.php on line 9"
+2019-02-21 18:03:20 pid:1 Worker process terminated with ERROR: E_ERROR "Class 'HWebServer\HAction' not found in F:\PHP\HServer\app\action\index.php on line 10"
+2019-02-21 18:05:14 pid:1 Worker process terminated with ERROR: E_ERROR "Class 'HAction' not found in F:\PHP\HServer\app\action\index.php on line 9"
+2019-02-21 18:05:23 pid:1 Worker process terminated with ERROR: E_ERROR "Class 'HAction' not found in F:\PHP\HServer\app\action\index.php on line 9"
+2019-02-21 18:05:45 pid:1 Error: Class 'WebWorker\Libs\HDb' not found in F:\PHP\HServer\hserver\core\HAction.php:23
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(42): HAction->__construct()
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(57): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 18:05:45 pid:1 Worker process terminated
+2019-02-21 18:06:55 pid:1 Error: Class 'Workerman\MySQL\Connection' not found in F:\PHP\HServer\hserver\config\HDb.php:27
+Stack trace:
+#0 F:\PHP\HServer\hserver\core\HAction.php(24): WebWorker\Libs\HDb::getInstance()
+#1 F:\PHP\HServer\hserver\HWebServer.php(42): HAction->__construct()
+#2 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#3 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#6 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#7 F:\PHP\HServer\hserver\HWebServer.php(57): Workerman\Worker->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#10 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#12 {main}
+2019-02-21 18:06:55 pid:1 Worker process terminated
+2019-02-21 18:07:24 pid:1 Error: Class 'WebWorker\Libs\HDb' not found in F:\PHP\HServer\hserver\core\HAction.php:24
+Stack trace:
+#0 F:\PHP\HServer\hserver\HWebServer.php(42): HAction->__construct()
+#1 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#5 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#6 F:\PHP\HServer\hserver\HWebServer.php(57): Workerman\Worker->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#10 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#11 {main}
+2019-02-21 18:07:24 pid:1 Worker process terminated
+2019-02-21 18:07:44 pid:1 PDOException: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+ in F:\PHP\HServer\vendor\wokerman\mysql\src\Connection.php:1711
+Stack trace:
+#0 F:\PHP\HServer\vendor\wokerman\mysql\src\Connection.php(1711): PDO->__construct('mysql:dbname=de...', 'root', 'root', Array)
+#1 F:\PHP\HServer\vendor\wokerman\mysql\src\Connection.php(1698): Workerman\MySQL\Connection->connect()
+#2 F:\PHP\HServer\hserver\config\HDb.php(27): Workerman\MySQL\Connection->__construct('127.0.0.1', 3306, 'root', 'root', 'demo')
+#3 F:\PHP\HServer\hserver\core\HAction.php(23): HDb::getInstance()
+#4 F:\PHP\HServer\hserver\HWebServer.php(42): HAction->__construct()
+#5 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#6 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#10 F:\PHP\HServer\hserver\HWebServer.php(57): Workerman\Worker->run()
+#11 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#12 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#13 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#14 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#15 {main}
+2019-02-21 18:07:44 pid:1 Worker process terminated
+2019-02-21 18:35:26 pid:1 Error: Class 'Request' not found in F:\PHP\HServer\hserver\HWebServer.php:43
+Stack trace:
+#0 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#1 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#2 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#3 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#5 F:\PHP\HServer\hserver\HWebServer.php(60): Workerman\Worker->run()
+#6 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#9 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#10 {main}
+2019-02-21 18:35:26 pid:1 Worker process terminated
+2019-02-21 18:40:56 pid:1 Error: Class 'HWebServer\Request' not found in F:\PHP\HServer\hserver\HWebServer.php:42
+Stack trace:
+#0 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#1 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#2 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#3 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#5 F:\PHP\HServer\hserver\HWebServer.php(55): Workerman\Worker->run()
+#6 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#9 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#10 {main}
+2019-02-21 18:40:56 pid:1 Worker process terminated
+2019-02-21 18:41:20 pid:1 Error: Class 'HWebServer\Request' not found in F:\PHP\HServer\hserver\HWebServer.php:42
+Stack trace:
+#0 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#1 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#2 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#3 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#5 F:\PHP\HServer\hserver\HWebServer.php(55): Workerman\Worker->run()
+#6 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#8 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#9 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#10 {main}
+2019-02-21 18:41:20 pid:1 Worker process terminated
+2019-02-21 18:52:54 pid:1 Worker process terminated with ERROR: E_COMPILE_ERROR "require_once(): Failed opening required 'F:\PHP\HServer\hserver\core/../../app/action/' (include_path='.;C:\php\pear') in F:\PHP\HServer\hserver\core\Response.php on line 84"
+2019-02-21 18:53:05 pid:1 Worker process terminated with ERROR: E_COMPILE_ERROR "require_once(): Failed opening required 'F:\PHP\HServer\hserver\core/../../app/action/' (include_path='.;C:\php\pear') in F:\PHP\HServer\hserver\core\Response.php on line 84"
+2019-02-21 18:53:28 pid:1 Error: Class 'WebWorker\Libs\HRedis' not found in F:\PHP\HServer\hserver\core\HAction.php:26
+Stack trace:
+#0 [internal function]: HAction->__construct()
+#1 F:\PHP\HServer\hserver\core\Response.php(87): ReflectionClass->newInstanceArgs()
+#2 F:\PHP\HServer\hserver\HWebServer.php(34): HWebServer\Response->invoke()
+#3 [internal function]: HWebServer\HWebServer->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#4 F:\PHP\HServer\vendor\wokerman\workerman\Connection\TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #19)
+#6 F:\PHP\HServer\vendor\wokerman\workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#7 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(2235): Workerman\Events\Select->loop()
+#8 F:\PHP\HServer\hserver\HWebServer.php(41): Workerman\Worker->run()
+#9 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1225): HWebServer\HWebServer->run()
+#10 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(1168): Workerman\Worker::forkWorkersForWindows()
+#11 F:\PHP\HServer\vendor\wokerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#12 F:\PHP\HServer\start.php(12): Workerman\Worker::runAll()
+#13 {main}
+2019-02-21 18:53:28 pid:1 Worker process terminated
