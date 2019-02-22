@@ -6,11 +6,12 @@
  * Time: 15:20
  */
 
-namespace HWebServer;
-require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/core/Request.php';
-require_once __DIR__ . '/core/Response.php';
+namespace HServer;
 
+require_once __DIR__ . '/../vendor/wokerman/workerman/Autoloader.php';
+
+use HServer\core\Request;
+use HServer\core\Response;
 use Workerman\Worker;
 
 class HWebServer extends Worker
@@ -28,9 +29,10 @@ class HWebServer extends Worker
 
     }
 
-    public function onClientMessage($connection,$data){
-        $req=new  Request($data);
-        $resp=new \HWebServer\Response($connection,$req);
+    public function onClientMessage($connection, $data)
+    {
+        $req = new  Request($data);
+        $resp = new Response($connection, $req);
         $resp->invoke();
     }
 

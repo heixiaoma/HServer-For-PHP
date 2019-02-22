@@ -6,15 +6,17 @@
  * Time: 16:59
  */
 
-require_once  __DIR__ ."/../../hserver/core/HAction.php";
+use HServer\core\HAction;
+
 class index extends HAction
 {
-
-    public function main(){
+    public function main()
+    {
         return "我是Main方法";
     }
 
-    public function me(){
+    public function me()
+    {
 
     }
 

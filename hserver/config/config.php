@@ -5,6 +5,10 @@
  * Date: 2019/2/21
  * Time: 13:56
  */
+
+
+namespace HServer\config;
+
 class config{
 
     public static function getRedis(){

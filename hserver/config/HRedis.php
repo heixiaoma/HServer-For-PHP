@@ -6,8 +6,7 @@
  * Time: 13:52
  */
 
-namespace WebWorker\Libs;
-require_once "config.php";
+namespace HServer\config;
 
 class HRedis
 {
@@ -21,7 +20,7 @@ class HRedis
      */
     public static function getInstance()
     {
-        $re = \config::getRedis();
+        $re = config::getRedis();
         if ($re['flag']) {
             if (!isset(self::$_instance)) {
                 $redis = new \Redis();

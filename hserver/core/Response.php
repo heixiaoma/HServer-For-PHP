@@ -6,7 +6,7 @@
  *  Author: Dizy <derzart@gmail.com>
  */
 
-namespace HWebServer;
+namespace HServer\core;
 
 use Workerman\Connection\TcpConnection;
 use Workerman\Protocols\Http;
@@ -82,7 +82,6 @@ class Response
     {
         $paths = explode("/", $this->req->getFullUri());
         if (count($paths) > 2) {
-            require_once __DIR__ . "/../core/HAction.php";
             require_once __DIR__ . "/../../app/action/" . $paths[1] . ".php";
             $class = new \ReflectionClass($paths[1]);
             $controller = $class->newInstanceArgs();

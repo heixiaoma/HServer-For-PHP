@@ -1,6 +1,6 @@
 <?php
 
-namespace HWebServer;
+namespace HServer\core;
 class Request
 {
     //Stable

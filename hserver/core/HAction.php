@@ -6,9 +6,13 @@
  * Time: 17:10
  */
 
+namespace HServer\core;
+
 require_once __DIR__ . "/../config/HDb.php";
 require_once __DIR__ . "/../config/HRedis.php";
-use WebWorker\Libs\HRedis;
+
+use HServer\config\HDb;
+use HServer\config\HRedis;
 
 class HAction
 {

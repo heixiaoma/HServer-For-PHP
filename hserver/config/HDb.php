@@ -6,10 +6,10 @@
  * Time: 13:53
  */
 
-
-require_once "config.php";
-require_once __DIR__ ."/../../vendor/wokerman/mysql/src/Connection.php";
+namespace HServer\config;
 use Workerman\MySQL\Connection;
+
+
 class HDb
 {
     /**
