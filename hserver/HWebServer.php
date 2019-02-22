@@ -38,6 +38,8 @@ class HWebServer extends Worker
 
     public function run()
     {
+        Worker::$logFile=__DIR__.'/../log/workerman.log';
+        Worker::$stdoutFile=__DIR__.'/../log/stdout.log';
         $this->reusePort = true;
         $this->onMessage = array($this, 'onClientMessage');
         parent::run();
