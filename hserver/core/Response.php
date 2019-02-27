@@ -61,13 +61,12 @@ class Response
      * 发送静态文件
      * @param $data
      */
-    public function sendStaticFile($head,$data)
+    public function sendStaticFile($head, $data)
     {
 
         $this->setContentType($head);
         $this->send($data);
     }
-
 
 
     public function send($body = "")
@@ -92,15 +91,12 @@ class Response
     }
 
 
-
-
     public function invoke()
     {
-
-
         $paths = explode("/", $this->req->getFullUri());
-        if (count($paths) > 2) {
-            require_once __DIR__ . "/../../app/action/" . $paths[1] . ".php";
+        $path = __DIR__ . "/../../app/action/" . $paths[1] . ".php";
+        if (count($paths) > 2 && is_file($path)) {
+            require_once $path;
             $class = new \ReflectionClass($paths[1]);
             $controller = $class->newInstanceArgs();
             if ($class->hasMethod($paths[2])) {
