@@ -3,7 +3,6 @@
 namespace HServer\core;
 class Request
 {
-    //Stable
     /**
      * @var array
      */

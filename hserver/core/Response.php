@@ -35,6 +35,7 @@ class Response
     public function __construct($connection, $req)
     {
         $this->connection = $connection;
+
         $this->req = $req;
         $this->sent = false;
     }
@@ -55,6 +56,18 @@ class Response
     {
         return Http::header("Content-Type: " . $type . ";charset=" . $charset);
     }
+
+    /**
+     * 发送静态文件
+     * @param $data
+     */
+    public function sendStaticFile($head,$data)
+    {
+
+        $this->setContentType($head);
+        $this->send($data);
+    }
+
 
 
     public function send($body = "")
@@ -78,8 +91,13 @@ class Response
         $this->send();
     }
 
+
+
+
     public function invoke()
     {
+
+
         $paths = explode("/", $this->req->getFullUri());
         if (count($paths) > 2) {
             require_once __DIR__ . "/../../app/action/" . $paths[1] . ".php";
