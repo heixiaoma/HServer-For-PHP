@@ -19,7 +19,7 @@ class StaticFiles
      */
     protected $connection;
 
-    public $path = __DIR__ . "/../../static";
+    public $path;
     public static $mimes = array(
         'html' => 'text/html',
         'htm' => 'text/html',
@@ -120,6 +120,7 @@ class StaticFiles
 
     public function __construct($connection)
     {
+        $this->path = __DIR__ . "/../../static";
         $this->connection = $connection;
         if (!is_dir($this->path)) {
             throw new \RuntimeException("static path error");
