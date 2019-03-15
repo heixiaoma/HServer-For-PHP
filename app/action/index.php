@@ -6,20 +6,22 @@
  * Time: 16:59
  */
 
-use HServer\core\HAction;
 
-class index extends HAction
+use HServer\core\HActionView;
+
+class index extends HActionView
 {
+
     public function main()
     {
-        return "我是Main方法";
+        return array("我是Main方法");
     }
 
-    public function me()
+    public function indexa()
     {
-
-
+        $this->assign("content","HServer");
+        $a=$this->fetch("index.html");
+        return $a;
     }
-
 
 }

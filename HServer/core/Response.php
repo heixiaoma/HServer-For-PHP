@@ -8,6 +8,7 @@
 
 namespace HServer\core;
 
+use Kafka\Exception;
 use Workerman\Connection\TcpConnection;
 use Workerman\Protocols\Http;
 
@@ -94,13 +95,21 @@ class Response
     public function invoke()
     {
         $paths = explode("/", $this->req->getFullUri());
-        $path = __DIR__ . "/../../app/action/" . $paths[1] . ".php";
+        $path = null;
+        $size = count($paths);
+        $classname = $paths[$size - 2];
+        for ($i = 0; $i < $size - 1; $i++) {
+            if (strlen($paths[$i]) > 0) {
+                $path .= "/" . $paths[$i];
+            }
+        }
+        $path = __DIR__ . "/../../app/action" . $path . ".php";
         if (count($paths) > 2 && is_file($path)) {
-            require_once $path;
-            $class = new \ReflectionClass($paths[1]);
+            @require_once($path);
+            $class = new \ReflectionClass($classname);
             $controller = $class->newInstanceArgs();
-            if ($class->hasMethod($paths[2])) {
-                $method = $class->getMethod($paths[2]);
+            if ($class->hasMethod($paths[$size - 1])) {
+                $method = $class->getMethod($paths[$size - 1]);
                 $data = $method->invoke($controller);
                 if (!empty($data)) {
                     if (gettype($data) === "string") {
@@ -117,6 +126,4 @@ class Response
         }
         $this->json("老铁，无数据输出！");
     }
-
-
 }
