@@ -65,4 +65,4 @@ class Autoloader
     }
 }
 
-spl_autoload_register('\hserver\Autoloader::loadByNamespace');
+spl_autoload_register('\HServer\Autoloader::loadByNamespace');
