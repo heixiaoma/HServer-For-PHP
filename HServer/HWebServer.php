@@ -25,6 +25,17 @@ class HWebServer extends Worker
 
     public function onClientMessage($connection, $data)
     {
+
+        /*
+         * 根据业务自己调整
+         */
+        static $request_count;
+        if(++$request_count > 10000) {
+            // 请求数达到10000后退出当前进程，主进程会自动重启一个新的进程
+            parent::stopAll();
+        }
+
+
         $temp = new StaticFiles($connection);
         if ($temp->invoke()) {
             return false;
