@@ -24,4 +24,19 @@ class index extends HActionView
         return $a;
     }
 
+
+//    /**
+//     * db操作，记得开启配置
+//     * @return string
+//     */
+//    public function db()
+//    {
+//        $this->redis->get("user");
+//        $this->db->query("select * from user");
+//        return "";
+//    }
+
+
+
+
 }
