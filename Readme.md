@@ -35,4 +35,4 @@
 
 ![AB测试](https://gitee.com/heixiaomas/HServer/raw/master/static/img/c.jpg)
 
-![运行截图](https://gitee.com/heixiaomas/HServer/raw/master/static/img/b.jpg)
+![运行截图](https://gitee.com/heixiaomas/HServer/raw/master/static/img/b.png)
