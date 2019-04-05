@@ -33,6 +33,6 @@
 
 注意：控制器，各部分都需要优化，目前没有时间搞，有时间想重新设计一次
 
-![AB测试](https://gitee.com/heixiaomas/HServer/raw/master/static/img/c.jpg"未命名拼图 (1).jpg")
+![AB测试](https://gitee.com/heixiaomas/HServer/raw/master/static/img/c.jpg)
 
-![运行截图](https://gitee.com/heixiaomas/HServer/raw/master/static/img/b.jpg"未命名拼图 (1).jpg")
+![运行截图](https://gitee.com/heixiaomas/HServer/raw/master/static/img/b.jpg)
