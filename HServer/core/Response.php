@@ -8,7 +8,6 @@
 
 namespace HServer\core;
 
-use Kafka\Exception;
 use Workerman\Connection\TcpConnection;
 use Workerman\Protocols\Http;
 
