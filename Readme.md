@@ -33,6 +33,11 @@
 
 注意：控制器，各部分都需要优化，目前没有时间搞，有时间想重新设计一次
 
+#### 2019-4-10
+     修改，HActionView 添加req，和resp
+     添加拦截器：HServerFilter,继承并实现auth方法，重写Level属性，设置优先级，越大，越先
+
+
 ![AB测试](https://gitee.com/heixiaomas/HServer/raw/master/static/img/c.jpg)
 
 ![运行截图](https://gitee.com/heixiaomas/HServer/raw/master/static/img/b.png)

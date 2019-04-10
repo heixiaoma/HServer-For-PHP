@@ -14,14 +14,14 @@ class index extends HActionView
 
     public function main()
     {
-        return array("我是Main方法");
+        $this->Response->json(array("a"=>1));
     }
 
     public function indexa()
     {
         $this->assign("content","HServer");
-        $a=$this->fetch("index.html");
-        return $a;
+        $html=$this->fetch("index.html");
+        $this->Response->send($html);
     }
 
 
@@ -33,7 +33,6 @@ class index extends HActionView
 //    {
 //        $this->redis->get("user");
 //        $this->db->query("select * from user");
-//        return "";
 //    }
 
 

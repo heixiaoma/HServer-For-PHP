@@ -10,6 +10,7 @@ namespace HServer;
 
 require_once __DIR__ . '/../vendor/wokerman/workerman/Autoloader.php';
 
+use HServer\core\Link;
 use HServer\core\Request;
 use HServer\core\Response;
 use Workerman\Worker;
@@ -30,18 +31,36 @@ class HWebServer extends Worker
          * 根据业务自己调整
          */
         static $request_count;
-        if(++$request_count > 10000) {
+        if (++$request_count > 10000) {
             // 请求数达到10000后退出当前进程，主进程会自动重启一个新的进程
             parent::stopAll();
         }
 
 
+        /**
+         * 构造Req，resp
+         */
+        $req = new  Request($data);
+        $resp = new Response($connection, $req);
+
+        /**
+         * 检查Filter是否存在
+         */
+
+        Link::invoke($req, $resp);
+
+        /**
+         * 检查静态文件，是否存在
+         */
         $temp = new StaticFiles($connection);
         if ($temp->invoke()) {
             return false;
         }
-        $req = new  Request($data);
-        $resp = new Response($connection, $req);
+
+
+        /**
+         * 检查控制器是否存在
+         */
         $resp->invoke();
     }
 

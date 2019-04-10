@@ -2,17 +2,18 @@
 /**
  * Created by PhpStorm.
  * User: hxm
- * Date: 2019/2/20
- * Time: 17:10
+ * Date: 2019/4/10
+ * Time: 12:01
  */
 
 namespace HServer\core;
 
 
-
-class HActionView extends HServerDB
+abstract class HServerFilter extends HServerDB
 {
+    protected $level = 1;
 
+    public abstract function auth();
 
     /**
      * @var Response
@@ -25,9 +26,8 @@ class HActionView extends HServerDB
     protected $Request;
 
 
-
     /**
-     * @param mixed $Response
+     * @param Response $Response
      */
     private function setResponse($Response)
     {
@@ -35,12 +35,13 @@ class HActionView extends HServerDB
     }
 
     /**
-     * @param mixed $Request
+     * @param Request $Request
      */
-    private function setRequest(Request $Request)
+    private function setRequest($Request)
     {
         $this->Request = $Request;
     }
+
 
 
 

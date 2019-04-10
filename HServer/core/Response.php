@@ -109,15 +109,19 @@ class Response
             $class = new \ReflectionClass($classname);
             $controller = $class->newInstanceArgs();
             if ($class->hasMethod($paths[$size - 1])) {
+                $setResponse = $class->getMethod("setResponse");
+                $setRequest = $class->getMethod("setRequest");
+                /**
+                 * 反射传入request和response
+                 */
+
+                $setRequest->setAccessible(true);
+                $setRequest->invoke($controller,$this->req);
+                $setResponse->setAccessible(true);
+                $setResponse->invoke($controller,$this);
+
                 $method = $class->getMethod($paths[$size - 1]);
-                $data = $method->invoke($controller);
-                if (!empty($data)) {
-                    if (gettype($data) === "string") {
-                        $this->send($data);
-                    } else {
-                        $this->json($data);
-                    }
-                }
+                $method->invoke($controller);
             } else {
                 $this->send("404");
             }
