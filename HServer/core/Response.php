@@ -96,6 +96,12 @@ class Response
         $paths = explode("/", $this->req->getFullUri());
         $path = null;
         $size = count($paths);
+        if ($size>2){
+            $boo=strpos($paths[$size-1],"?");
+            if ($boo>0){
+                $paths[$size-1]=substr($paths[$size-1],0,$boo);
+            }
+        }
         $classname = $paths[$size - 2];
         for ($i = 0; $i < $size - 1; $i++) {
             if (strlen($paths[$i]) > 0) {
