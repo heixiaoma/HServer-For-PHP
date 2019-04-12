@@ -44,18 +44,19 @@ class HWebServer extends Worker
         $resp = new Response($connection, $req);
 
         /**
-         * 检查Filter是否存在
-         */
-
-        Link::invoke($req, $resp);
-
-        /**
          * 检查静态文件，是否存在
          */
         $temp = new StaticFiles($connection);
         if ($temp->invoke()) {
             return false;
         }
+
+
+        /**
+         * 检查Filter是否存在
+         */
+
+        Link::invoke($req, $resp);
 
 
         /**
