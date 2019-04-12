@@ -129,7 +129,12 @@ class StaticFiles
 
     public function invoke()
     {
-        $url_info = parse_url('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+
+        $s_path = $_SERVER['REQUEST_URI'];
+        if ($s_path === "/") {
+            $s_path = "/index.html";
+        }
+        $url_info = parse_url('http://' . $_SERVER['HTTP_HOST'] . $s_path);
         $path = isset($url_info['path']) ? $url_info['path'] : '/';
         $path_info = pathinfo($path);
         $file_extension = isset($path_info['extension']) ? $path_info['extension'] : '';
