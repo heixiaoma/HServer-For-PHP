@@ -9,18 +9,14 @@
 namespace HServer\core;
 
 
-use function PHPSTORM_META\map;
-
 class Link
 {
 
-    private static $map=array();
 
-
-    public static function invoke($req,$resp)
+    public static function invoke($req, $resp)
     {
 
-        $map=array();
+        $map = array();
 
         /**
          * 扫描Filter文件路径
@@ -29,9 +25,7 @@ class Link
         $filterFile = scandir($path);
         foreach ($filterFile as $filename) {
             if ($filename != '.' && $filename != '..' && $filename . strpos($filename, 'php') !== false) {
-                $classpath = $path . $filename;
                 $classname = substr($filename, 0, -4);
-                require_once($classpath);
                 $class = new \ReflectionClass($classname);
                 $filter = $class->newInstanceArgs();
                 if ($class->hasMethod("auth")) {
@@ -46,18 +40,18 @@ class Link
 
                     $level = $class->getProperty('level');
                     $level->setAccessible(true);
-                    $index=$level->getValue($filter);
+                    $index = $level->getValue($filter);
 
-                    $a=array("level"=>$index,"filter"=>$filter,"class"=>$class);
-                    $map[]=$a;
-                    array_multisort(array_column($map,'level'),SORT_DESC,$map);
+                    $a = array("level" => $index, "filter" => $filter, "class" => $class);
+                    $map[] = $a;
+                    array_multisort(array_column($map, 'level'), SORT_DESC, $map);
 
                 } else {
                     echo "无拦截器";
                 }
             }
         }
-        foreach ($map as $m){
+        foreach ($map as $m) {
 
             $setResponse = $m['class']->getMethod("auth");
             $setResponse->setAccessible(true);

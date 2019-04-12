@@ -96,10 +96,10 @@ class Response
         $paths = explode("/", $this->req->getFullUri());
         $path = null;
         $size = count($paths);
-        if ($size>2){
-            $boo=strpos($paths[$size-1],"?");
-            if ($boo>0){
-                $paths[$size-1]=substr($paths[$size-1],0,$boo);
+        if ($size > 2) {
+            $boo = strpos($paths[$size - 1], "?");
+            if ($boo > 0) {
+                $paths[$size - 1] = substr($paths[$size - 1], 0, $boo);
             }
         }
         $classname = $paths[$size - 2];
@@ -110,7 +110,6 @@ class Response
         }
         $path = __DIR__ . "/../../app/action" . $path . ".php";
         if (count($paths) > 2 && is_file($path)) {
-            @require_once($path);
             $class = new \ReflectionClass($classname);
             $controller = $class->newInstanceArgs();
             if ($class->hasMethod($paths[$size - 1])) {
@@ -121,9 +120,9 @@ class Response
                  */
 
                 $setRequest->setAccessible(true);
-                $setRequest->invoke($controller,$this->req);
+                $setRequest->invoke($controller, $this->req);
                 $setResponse->setAccessible(true);
-                $setResponse->invoke($controller,$this);
+                $setResponse->invoke($controller, $this);
 
                 $method = $class->getMethod($paths[$size - 1]);
                 $method->invoke($controller);
