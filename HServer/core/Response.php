@@ -111,6 +111,9 @@ class Response
         $path = __DIR__ . "/../../app/action" . $path . ".php";
         if (count($paths) > 2 && is_file($path)) {
             $class = new \ReflectionClass($classname);
+
+
+
             $controller = $class->newInstanceArgs();
             if ($class->hasMethod($paths[$size - 1])) {
                 $setResponse = $class->getMethod("setResponse");
@@ -118,7 +121,6 @@ class Response
                 /**
                  * 反射传入request和response
                  */
-
                 $setRequest->setAccessible(true);
                 $setRequest->invoke($controller, $this->req);
                 $setResponse->setAccessible(true);
@@ -132,6 +134,5 @@ class Response
         } else {
             $this->send("无法访问控制器--->首页路径");
         }
-        $this->json("老铁，无数据输出！");
     }
 }
