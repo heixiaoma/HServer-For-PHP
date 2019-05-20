@@ -89,6 +89,13 @@ class Request
             $this->post[$key] = $value;
         }
 
+        // Parsing files
+        $this->files = [];
+        foreach ($data['files'] as $fileinfo){
+            array_push($this->files, new File($fileinfo));
+        }
+
+
         $this->hostname = $this->headers['HTTP_HOST'];
         $this->fullRequestUri = $this->headers['REQUEST_URI'];
         $this->requestUri = $this->headers['REQUEST_URI'];
@@ -191,5 +198,27 @@ class Request
     {
         return $this->method;
     }
+
+
+    /**
+     * Get a posted file or all
+     *
+     * @param string|null $name
+     * @return array|File|null
+     */
+    public function file($name = null)
+    {
+        if (is_null($name)) {
+            return $this->files;
+        } else {
+            foreach ($this->files as $file) {
+                if ($file->getName() === $name) {
+                    return $file;
+                }
+            }
+        }
+        return null;
+    }
+
 
 }
