@@ -99,7 +99,7 @@ class File
      */
     public function save($directory, $filename = null, $replace = true)
     {
-        $directory = rtrim(fix_slashes_in_path($directory), DS) . DS;
+        $directory = rtrim($this->fix_slashes_in_path($directory), DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR;
         if (is_null($filename)) {
             $filename = $this->filename;
         }
@@ -129,6 +129,16 @@ class File
                 return $this->getSize();
             case "type":
                 return $this->getType();
+        }
+    }
+
+
+    function fix_slashes_in_path($path)
+    {
+        if("/" == DIRECTORY_SEPARATOR){
+            return str_replace("\\", "\\", $path);
+        }else{
+            return str_replace("/", "/", $path);
         }
     }
 
