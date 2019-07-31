@@ -50,7 +50,8 @@
      修改，HActionView 添加req，和resp
      添加拦截器：HServerFilter,继承并实现auth方法，重写Level属性，设置优先级，越大，越先
 
-
-![AB测试](https://gitee.com/heixiaomas/HServer/raw/master/static/img/c.jpg)
+#### 2019-7-30
+     ab压测截图如下，吞吐率 7w+ 测试机:Centos event扩展 4核,2G, 
+![AB测试](https://gitee.com/heixiaomas/HServer/raw/master/static/img/d.png)
 
 ![运行截图](https://gitee.com/heixiaomas/HServer/raw/master/static/img/b.png)
