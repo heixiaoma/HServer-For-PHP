@@ -20,7 +20,7 @@ class HRedis
      */
     public static function getInstance()
     {
-        $re = config::getRedis();
+        $re = Config::getRedis();
         if ($re['flag']) {
             if (!isset(self::$_instance)) {
                 $redis = new \Redis();

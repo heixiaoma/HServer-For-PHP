@@ -9,7 +9,7 @@
 
 namespace HServer\config;
 
-class config{
+class Config{
 
     public static function getRedis(){
         $redis = array();

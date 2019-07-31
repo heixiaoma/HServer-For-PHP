@@ -8,6 +8,7 @@
 
 namespace HServer\core;
 
+use HServer\core\ioc\Container;
 use Workerman\Connection\TcpConnection;
 use Workerman\Protocols\Http;
 
@@ -108,13 +109,35 @@ class Response
                 $path .= "/" . $paths[$i];
             }
         }
+
         $path = __DIR__ . "/../../app/action" . $path . ".php";
         if (count($paths) > 2 && is_file($path)) {
+            /**
+             * 判断容器，
+             */
+            if (Container::exist($classname)) {
+                try {
+                    $Obj = Container::getBean($classname);
+                    $setResponse = "setResponse";
+                    $setRequest = "setRequest";
+                    $method = $paths[$size - 1];
+                    $Obj->$setRequest($this->req);
+                    $Obj->$setResponse($this);
+                    $Obj->$method();
+                    echo "走容器";
+                } catch (\Throwable $exception) {
+                    $this->send("404->" . $exception->getMessage());
+                }
+                return;
+            }
+
+            echo "不走容器";
+            /**
+             * 首次加载
+             */
             $class = new \ReflectionClass($classname);
-
-
-
             $controller = $class->newInstanceArgs();
+            Container::addBean($classname, $controller);
             if ($class->hasMethod($paths[$size - 1])) {
                 $setResponse = $class->getMethod("setResponse");
                 $setRequest = $class->getMethod("setRequest");

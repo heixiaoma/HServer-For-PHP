@@ -8,16 +8,39 @@
 
 namespace HServer\core;
 
+use HServer\core\ioc\Container;
 
 class Link
 {
 
-
     public static function invoke($req, $resp)
     {
 
-        $map = array();
+        /**
+         * 容器查询看看有没有，有就拿出来用
+         */
+        $benName = "Filter";
+        if (Container::exist($benName)) {
+            try {
+                echo "Filter走容器";
+                $map = Container::getBean($benName);
+                foreach ($map as $m) {
+                    $setResponse = "setResponse";
+                    $setRequest = "setRequest";
+                    $method = "auth";
+                    $Obj = $m['filter'];
+                    $Obj->$setRequest($req);
+                    $Obj->$setResponse($resp);
+                    $Obj->$method();
+                }
+            } catch (\Throwable $exception) {
+                echo "404->" . $exception->getMessage();
+            }
+            return;
+        }
+        echo "Filter不走容器";
 
+        $map = array();
         /**
          * 扫描Filter文件路径
          */
@@ -26,6 +49,7 @@ class Link
         foreach ($filterFile as $filename) {
             if ($filename != '.' && $filename != '..' && $filename . strpos($filename, 'php') !== false) {
                 $classname = substr($filename, 0, -4);
+
                 $class = new \ReflectionClass($classname);
                 $filter = $class->newInstanceArgs();
                 if ($class->hasMethod("auth")) {
@@ -51,16 +75,13 @@ class Link
                 }
             }
         }
+
+        Container::addBean($benName, $map);
         foreach ($map as $m) {
-
-            $setResponse = $m['class']->getMethod("auth");
-            $setResponse->setAccessible(true);
-            $setResponse->invoke($m['filter']);
-
-
+            $auth = $m['class']->getMethod("auth");
+            $auth->setAccessible(true);
+            $auth->invoke($m['filter']);
         }
-
-
     }
 
 

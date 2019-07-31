@@ -29,7 +29,7 @@ class HActionView extends HServerDB
     /**
      * @param mixed $Response
      */
-    private function setResponse($Response)
+    public function setResponse($Response)
     {
         $this->Response = $Response;
     }
@@ -37,7 +37,7 @@ class HActionView extends HServerDB
     /**
      * @param mixed $Request
      */
-    private function setRequest(Request $Request)
+    public function setRequest(Request $Request)
     {
         $this->Request = $Request;
     }

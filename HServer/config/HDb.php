@@ -23,7 +23,7 @@ class HDb
     public static function getInstance()
     {
 
-        $db=config::getDB();
+        $db=Config::getDB();
         if($db['flag']) {
             if (!isset(self::$_instance)) {
                 self::$_instance = new Connection($db['host'], $db["port"], $db["user"], $db["password"], $db["db"]);

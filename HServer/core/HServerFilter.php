@@ -29,7 +29,7 @@ abstract class HServerFilter extends HServerDB
     /**
      * @param Response $Response
      */
-    private function setResponse($Response)
+    public function setResponse($Response)
     {
         $this->Response = $Response;
     }
@@ -37,7 +37,7 @@ abstract class HServerFilter extends HServerDB
     /**
      * @param Request $Request
      */
-    private function setRequest($Request)
+    public function setRequest($Request)
     {
         $this->Request = $Request;
     }
