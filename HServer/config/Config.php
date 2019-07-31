@@ -9,9 +9,14 @@
 
 namespace HServer\config;
 
-class Config{
-
-    public static function getRedis(){
+class Config
+{
+    /**
+     * 配置redis,默认不连接
+     * @return array
+     */
+    public static function getRedis()
+    {
         $redis = array();
         $redis["host"] = "47.99.211.65";
         $redis["port"] = 6379;
@@ -22,7 +27,12 @@ class Config{
         return $redis;
     }
 
-    public static function getDB(){
+    /**
+     * 配置Mysql，默认不连接
+     * @return array
+     */
+    public static function getDB()
+    {
         $db = array();
         $db["host"] = "10.10.11.171";
         $db["user"] = "root";
