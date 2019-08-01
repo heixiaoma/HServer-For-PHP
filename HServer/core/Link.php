@@ -22,7 +22,6 @@ class Link
         $benName = "Filter";
         if (Container::exist($benName)) {
             try {
-                echo "Filter走容器";
                 $map = Container::getBean($benName);
                 foreach ($map as $m) {
                     $setResponse = "setResponse";
@@ -38,7 +37,6 @@ class Link
             }
             return;
         }
-        echo "Filter不走容器";
 
         $map = array();
         /**

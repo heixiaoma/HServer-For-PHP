@@ -25,7 +25,7 @@ class HRedis
             if (!isset(self::$_instance)) {
                 $redis = new \Redis();
                 $redis->connect($re["host"], $re["port"]);
-                if (count($re["password"]) > 0) {
+                if (strlen($re["password"]) > 0) {
                     $redis->auth($re["password"]);
                 }
                 self::$_instance = $redis;
