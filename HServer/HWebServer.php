@@ -10,6 +10,7 @@ namespace HServer;
 
 require_once __DIR__ . '/../vendor/wokerman/workerman/Autoloader.php';
 
+use HServer\core\Dispatcher;
 use HServer\core\Link;
 use HServer\core\Request;
 use HServer\core\Response;
@@ -41,7 +42,7 @@ class HWebServer extends Worker
          * 构造Req，resp
          */
         $req = new  Request($data);
-        $resp = new Response($connection, $req);
+        $resp = new Response($connection);
 
         /**
          * 检查静态文件，是否存在
@@ -50,19 +51,16 @@ class HWebServer extends Worker
         if ($temp->invoke()) {
             return false;
         }
-
-
         /**
          * 检查Filter是否存在
          */
 
         Link::invoke($req, $resp);
 
-
         /**
-         * 检查控制器是否存在
+         * 检查控制器是否存在,进行分发
          */
-        $resp->invoke();
+        Dispatcher::display($resp,$req);
     }
 
     public function run()

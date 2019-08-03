@@ -6,9 +6,9 @@
  * Time: 13:53
  */
 
-namespace HServer\config;
+namespace HServer\core\db;
+use HServer\config\Config;
 use Workerman\MySQL\Connection;
-
 
 class HDb
 {

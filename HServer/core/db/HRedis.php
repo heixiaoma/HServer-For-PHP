@@ -6,7 +6,8 @@
  * Time: 13:52
  */
 
-namespace HServer\config;
+namespace HServer\core\db;
+use HServer\config\Config;
 
 class HRedis
 {

@@ -8,18 +8,18 @@
 
 namespace HServer\core;
 
-require_once __DIR__ . "/../config/HDb.php";
-require_once __DIR__ . "/../config/HRedis.php";
-require_once __DIR__ . '/../../vendor/smarty/Smarty.class.php';
+use HServer\core\db\HDb;
+use HServer\core\db\HRedis;
 
-use HServer\config\HDb;
-use HServer\config\HRedis;
+require_once __DIR__ . '/../../vendor/smarty/Smarty.class.php';
 
 class HServerDB
 {
     protected $db;
     protected $redis;
     protected $view;
+
+
 
     public function __construct()
     {
