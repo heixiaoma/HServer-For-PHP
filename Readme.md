@@ -18,6 +18,9 @@
     重启
     4，php start.php restart
 
+    平滑重启
+    5，php start.php reload
+
 #### 配置文件
     关于redis和mysql在Hserver/config/config.php
     配置好后开启就可以在控制器中使用了
