@@ -15,6 +15,8 @@
     状态查询
     3，php start.php status
 
+    重启
+    4，php start.php restart
 
 #### 配置文件
     关于redis和mysql在Hserver/config/config.php
