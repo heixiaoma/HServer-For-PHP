@@ -46,6 +46,7 @@
     
     由于Task是单独woker，所以启动方式Linux不变，win请点击start_for_win.bat
     
+    下次预计更新，错误日志定位监控
  
 #### 2019-8-4
     对Req和Resp优化
