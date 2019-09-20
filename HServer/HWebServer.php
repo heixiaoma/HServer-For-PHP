@@ -10,19 +10,18 @@ namespace HServer;
 
 require_once __DIR__ . '/../vendor/wokerman/workerman/Autoloader.php';
 
-use HServer\core\Dispatcher;
-use HServer\core\Link;
-use HServer\core\Request;
-use HServer\core\Response;
+use HServer\core\view\Dispatcher;
+use HServer\core\http\Link;
+use HServer\core\http\Request;
+use HServer\core\http\Response;
 use Workerman\Worker;
-use HServer\core\StaticFiles;
+use HServer\core\file\StaticFiles;
 
 class HWebServer extends Worker
 {
     public function __construct($socket_name = '', array $context_option = array())
     {
         parent::__construct($socket_name, $context_option);
-
     }
 
     public function onClientMessage($connection, $data)
@@ -60,13 +59,13 @@ class HWebServer extends Worker
         /**
          * 检查控制器是否存在,进行分发
          */
-        Dispatcher::display($resp,$req);
+        Dispatcher::display($resp, $req);
     }
 
     public function run()
     {
-        Worker::$logFile = __DIR__ . '/../log/workerman.log';
-        Worker::$stdoutFile = __DIR__ . '/../log/stdout.log';
+        Worker::$logFile = __DIR__ . '/../log/web.log';
+        Worker::$stdoutFile = __DIR__ . '/../log/web_stdout.log';
         $this->reusePort = true;
         $this->onMessage = array($this, 'onClientMessage');
         parent::run();

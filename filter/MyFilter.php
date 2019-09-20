@@ -6,7 +6,7 @@
  * Time: 12:44
  */
 
-use HServer\core\HServerFilter;
+use HServer\core\http\HServerFilter;
 
 class MyFilter extends HServerFilter
 {

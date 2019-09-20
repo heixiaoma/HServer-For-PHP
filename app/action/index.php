@@ -7,7 +7,7 @@
  */
 
 
-use HServer\core\HActionView;
+use HServer\core\view\HActionView;
 
 class index extends HActionView
 {
