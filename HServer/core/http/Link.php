@@ -42,7 +42,7 @@ class Link
         /**
          * 扫描Filter文件路径
          */
-        $path = __DIR__ . "/../../../filter/";
+        $path = __DIR__ . "/../../../app/filter/";
         $filterFile = scandir($path);
         foreach ($filterFile as $filename) {
             if ($filename != '.' && $filename != '..' && $filename . strpos($filename, 'php') !== false) {

@@ -37,6 +37,13 @@
 #### 2019-9-20
     对文件进行优化，
     正在处理定时器任务工具的封装
+    定时任务文件存放在app
+    拦截器存放在App
+    静态文件存在在App
+    action存在App
+    view模板文件存在App里面
+    Task任务继承，HServerTask，父类封装了DB和Redis相关的操作
+    
  
 #### 2019-8-4
     对Req和Resp优化

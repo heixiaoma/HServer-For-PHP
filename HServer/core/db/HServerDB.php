@@ -16,8 +16,6 @@ class HServerDB
     protected $redis;
     protected $view;
 
-
-
     public function __construct()
     {
         $this->db = HDb::getInstance();

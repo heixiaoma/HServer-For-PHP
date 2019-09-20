@@ -120,7 +120,7 @@ class StaticFiles
 
     public function __construct($connection)
     {
-        $this->path = __DIR__ . "/../../../static";
+        $this->path = __DIR__ . "/../../../app/static";
         $this->connection = $connection;
         if (!is_dir($this->path)) {
             throw new \RuntimeException("static path error");

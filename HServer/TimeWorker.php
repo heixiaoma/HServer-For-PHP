@@ -23,13 +23,29 @@ class TimeWorker extends Worker
 
     public function onClientStart($worker)
     {
-        $time_interval = 2.5;
-        Timer::add($time_interval, function () {
-            echo "task run\n";
-        });
-        echo "定时器启动";
-    }
 
+        $path = __DIR__ . "/../app/task/";
+        $filterFile = scandir($path);
+        foreach ($filterFile as $filename) {
+            if ($filename != '.' && $filename != '..' && $filename . strpos($filename, 'php') !== false) {
+                $classname = substr($filename, 0, -4);
+                $class = new \ReflectionClass($classname);
+                $timeTask = $class->newInstanceArgs();
+                if ($class->hasMethod("run")) {
+                    $time = $class->getProperty('time');
+                    $time->setAccessible(true);
+                    $timeout = $time->getValue($timeTask);
+                    $run = $class->getMethod("run");
+                    $run->setAccessible(true);
+                    Timer::add($timeout, function () use ($run, $timeTask) {
+                        $run->invoke($timeTask);
+                    });
+                } else {
+                    echo "无定时器";
+                }
+            }
+        }
+    }
 
     public function run()
     {
