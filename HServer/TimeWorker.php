@@ -20,15 +20,14 @@ class TimeWorker extends Worker
         parent::__construct($socket_name, $context_option);
     }
 
-
     public function onClientStart($worker)
     {
-
         $path = __DIR__ . "/../app/task/";
         $filterFile = scandir($path);
         foreach ($filterFile as $filename) {
             if ($filename != '.' && $filename != '..' && $filename . strpos($filename, 'php') !== false) {
                 $classname = substr($filename, 0, -4);
+
                 $class = new \ReflectionClass($classname);
                 $timeTask = $class->newInstanceArgs();
                 if ($class->hasMethod("run")) {

@@ -8,6 +8,9 @@
 
 require_once __DIR__ . "/../TimeWorker.php";
 
+require_once __DIR__ . '/../load.php';
+
+
 use Workerman\Worker;
 use HServer\TimeWorker;
 
