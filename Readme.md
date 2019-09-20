@@ -44,6 +44,8 @@
     view模板文件存在App里面
     Task任务继承，HServerTask，父类封装了DB和Redis相关的操作
     
+    由于Task是单独woker，所以启动方式Linux不变，win请点击start_for_win.bat
+    
  
 #### 2019-8-4
     对Req和Resp优化
