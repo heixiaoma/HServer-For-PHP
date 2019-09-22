@@ -32,7 +32,7 @@ class index extends HActionView
 //    public function db()
 //    {
 //        $this->redis->get("user");
-//        $this->db->query("select * from user");
+//        $this->db->select(" movies");
 //    }
 
 

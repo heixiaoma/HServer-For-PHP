@@ -11,7 +11,7 @@
 namespace HServer\core\db;
 
 use HServer\config\Config;
-use Workerman\MySQL\Connection;
+use Workerman\Mysql\Connection;
 
 class HDb
 {

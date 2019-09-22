@@ -18,7 +18,7 @@ class Config
     public static function getRedis()
     {
         $redis = array();
-        $redis["host"] = "47.99.211.65";
+        $redis["host"] = "127.0.0.1";
         $redis["port"] = 6379;
         //无密码留空
         $redis["password"] = "123456a.";

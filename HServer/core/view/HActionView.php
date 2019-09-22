@@ -40,7 +40,6 @@ class HActionView extends HServerDB
     public function __construct()
     {
         $this->view = new \Smarty();
-
     }
 
 

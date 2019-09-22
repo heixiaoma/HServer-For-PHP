@@ -62,18 +62,22 @@ class Dispatcher
             $controller = $class->newInstanceArgs();
             Container::addBean($classname, $controller);
             if ($class->hasMethod($paths[$size - 1])) {
-                $setResponse = $class->getMethod("setResponse");
-                $setRequest = $class->getMethod("setRequest");
-                /**
-                 * 反射传入request和response
-                 */
-                $setRequest->setAccessible(true);
-                $setRequest->invoke($controller, $req);
-                $setResponse->setAccessible(true);
-                $setResponse->invoke($controller, $resp);
+                try {
+                    $setResponse = $class->getMethod("setResponse");
+                    $setRequest = $class->getMethod("setRequest");
+                    /**
+                     * 反射传入request和response
+                     */
+                    $setRequest->setAccessible(true);
+                    $setRequest->invoke($controller, $req);
+                    $setResponse->setAccessible(true);
+                    $setResponse->invoke($controller, $resp);
 
-                $method = $class->getMethod($paths[$size - 1]);
-                $method->invoke($controller);
+                    $method = $class->getMethod($paths[$size - 1]);
+                    $method->invoke($controller);
+                } catch (\Throwable $exception) {
+                    $resp->send("404->" . $exception->getMessage());
+                }
             } else {
                 $resp->send("404");
             }
