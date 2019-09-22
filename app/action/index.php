@@ -14,7 +14,6 @@ class index extends HActionView
 
     public function main()
     {
-        echo 1/0;
         $this->Response->json(array("a" => 1));
     }
 
