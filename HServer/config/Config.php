@@ -34,10 +34,10 @@ class Config
     public static function getDB()
     {
         $db = array();
-        $db["host"] = "10.10.11.171";
+        $db["host"] = "127.0.0.1";
         $db["user"] = "root";
-        $db["password"] = "root";
-        $db["db"] = "demo";
+        $db["password"] = "haosql";
+        $db["db"] = "av";
         $db["port"] = 3306;
         //是否开启db
         $db['flag'] = false;

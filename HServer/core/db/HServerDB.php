@@ -14,29 +14,11 @@ class HServerDB
 {
     protected $db;
     protected $redis;
-    protected $view;
 
     public function __construct()
     {
         $this->db = HDb::getInstance();
         $this->redis = HRedis::getInstance();
-        $this->view = new \Smarty();
-
-    }
-
-    protected function assign($key, $value)
-    {
-        $this->view->assign($key, $value);
-    }
-
-    protected function fetch($tpl, $path = "app/view")
-    {
-        if ($path != "app/view") {
-            $path = "app/view" . $path;
-        }
-        $this->view->setTemplateDir($path);
-        return $this->view->fetch($tpl);
-
     }
 
 }

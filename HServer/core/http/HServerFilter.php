@@ -8,43 +8,11 @@
 
 namespace HServer\core\http;
 
-use HServer\core\db\HServerDB;
+use HServer\core\view\HActionView;
 
-abstract class HServerFilter extends HServerDB
+abstract class HServerFilter extends HActionView
 {
     protected $level = 1;
 
     public abstract function auth();
-
-    /**
-     * @var Response
-     */
-    protected $Response;
-
-    /**
-     * @var Request
-     */
-    protected $Request;
-
-
-    /**
-     * @param Response $Response
-     */
-    public function setResponse($Response)
-    {
-        $this->Response = $Response;
-    }
-
-    /**
-     * @param Request $Request
-     */
-    public function setRequest($Request)
-    {
-        $this->Request = $Request;
-    }
-
-
-
-
-
 }

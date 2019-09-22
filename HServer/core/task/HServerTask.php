@@ -10,23 +10,15 @@ namespace HServer\core\task;
 
 use HServer\core\db\HDb;
 use HServer\core\db\HRedis;
+use HServer\core\db\HServerDB;
 
 /**
  * Class HServerTask
  * @package HServer\core\task
  */
-abstract class HServerTask
+abstract class HServerTask extends HServerDB
 {
-    protected $db;
-    protected $redis;
     protected $time;
-
-    public function __construct()
-    {
-        $this->db = HDb::getInstance();
-        $this->redis = HRedis::getInstance();
-
-    }
 
     public abstract function run();
 

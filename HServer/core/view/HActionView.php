@@ -13,6 +13,8 @@ use HServer\core\db\HServerDB;
 use HServer\core\http\Request;
 use HServer\core\http\Response;
 
+require_once __DIR__ . '/../../../vendor/smarty/Smarty.class.php';
+
 
 class HActionView extends HServerDB
 {
@@ -28,6 +30,18 @@ class HActionView extends HServerDB
      */
     protected $Request;
 
+
+    protected $view;
+
+    /**
+     * HActionView constructor.
+     * @param $view
+     */
+    public function __construct()
+    {
+        $this->view = new \Smarty();
+
+    }
 
 
     /**
@@ -46,6 +60,22 @@ class HActionView extends HServerDB
         $this->Request = $Request;
     }
 
+
+
+    protected function assign($key, $value)
+    {
+        $this->view->assign($key, $value);
+    }
+
+    protected function fetch($tpl, $path = "app/view")
+    {
+        if ($path != "app/view") {
+            $path = "app/view" . $path;
+        }
+        $this->view->setTemplateDir($path);
+        return $this->view->fetch($tpl);
+
+    }
 
 
 

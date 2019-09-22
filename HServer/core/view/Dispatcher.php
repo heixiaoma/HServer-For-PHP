@@ -17,7 +17,8 @@ class Dispatcher
 {
 
 
-    public static function display(Response $resp,Request $req){
+    public static function display(Response $resp, Request $req)
+    {
         $paths = explode("/", $req->getFullUri());
         $path = null;
         $size = count($paths);
