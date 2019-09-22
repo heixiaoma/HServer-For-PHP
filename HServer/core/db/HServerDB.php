@@ -8,7 +8,6 @@
 
 namespace HServer\core\db;
 
-require_once __DIR__ . '/../../../vendor/smarty/Smarty.class.php';
 
 class HServerDB
 {
