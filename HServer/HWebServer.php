@@ -36,7 +36,6 @@ class HWebServer extends Worker
             parent::stopAll();
         }
 
-
         /**
          * 构造Req，resp
          */

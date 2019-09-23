@@ -27,21 +27,6 @@ class Request
     /**
      * @var array
      */
-    protected $payload;
-
-    /**
-     * @var array
-     */
-    protected $cookie;
-
-    /**
-     * @var array|null
-     */
-    protected $session;
-
-    /**
-     * @var array
-     */
     protected $files;
 
     /**
@@ -64,11 +49,6 @@ class Request
      */
     protected $ip;
 
-    //Unstable
-    /**
-     * @var null|Lang
-     */
-    protected $lang = null;
 
     /**
      * @var null|object
@@ -86,7 +66,6 @@ class Request
         }
         // Parsing post parameters
         foreach ($data['post'] as $key => $value) {
-
             $this->post[$key] = $value;
         }
 
@@ -95,7 +74,6 @@ class Request
         foreach ($data['files'] as $fileinfo) {
             array_push($this->files, new File($fileinfo));
         }
-
 
         $this->hostname = $this->headers['HTTP_HOST'];
         $this->fullRequestUri = $this->headers['REQUEST_URI'];
@@ -130,45 +108,6 @@ class Request
         }
     }
 
-
-    public function rawPost($data = null)
-    {
-        if (is_null($data)) {
-            return filter($GLOBALS['HTTP_RAW_POST_DATA']);
-        } else {
-            $GLOBALS['HTTP_RAW_POST_DATA'] = $data;
-        }
-    }
-
-    public function payload($data = null)
-    {
-        if (is_array($data)) {
-            $this->payload = $data;
-        } else if (is_null($data)) {
-            return (object)$this->payload;
-        } else if (is_string($data)) {
-            return isset($this->payload[$data]) ? $this->payload[$data] : null;
-        }
-    }
-
-
-    public function cookie($key = null)
-    {
-        if (is_null($key)) {
-            return (object)$this->cookie;
-        } else {
-            return isset($this->cookie[$key]) ? $this->cookie[$key] : null;
-        }
-    }
-
-    public function session($key = null)
-    {
-        if (is_null($key)) {
-            return (object)$this->session;
-        } else {
-            return isset($this->session[$key]) ? $this->session[$key] : null;
-        }
-    }
 
     public function getIp()
     {

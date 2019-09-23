@@ -40,7 +40,7 @@ class Config
         $db["db"] = "av";
         $db["port"] = 3306;
         //是否开启db
-        $db['flag'] = true;
+        $db['flag'] = false;
         return $db;
     }
 
