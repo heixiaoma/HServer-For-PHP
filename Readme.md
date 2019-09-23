@@ -74,6 +74,6 @@
 
 #### 2019-7-30
      ab压测截图如下，吞吐率 7w+ 测试机:Centos event扩展 4核,2G, 
-![AB测试](https://gitee.com/heixiaomas/HServer/raw/master/static/img/d.png)
+![AB测试](https://gitee.com/heixiaomas/HServer/raw/master/app/static/img/d.png)
 
-![运行截图](https://gitee.com/heixiaomas/HServer/raw/master/static/img/b.png)
+![运行截图](https://gitee.com/heixiaomas/HServer/raw/master/app/static/img/b.png)
