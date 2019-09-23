@@ -15,7 +15,6 @@ class MyFilter extends HServerFilter
 
     public function auth()
     {
-
         echo "我是拦截器MyFilter，优先级为1,你的IP是：".$this->Request->getIp()."\n";
     }
 

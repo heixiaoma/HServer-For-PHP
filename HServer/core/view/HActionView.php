@@ -19,7 +19,6 @@ require_once __DIR__ . '/../../../vendor/smarty/Smarty.class.php';
 class HActionView extends HServerDB
 {
 
-
     /**
      * @var Response
      */
@@ -39,6 +38,7 @@ class HActionView extends HServerDB
      */
     public function __construct()
     {
+        parent::__construct();
         $this->view = new \Smarty();
     }
 
@@ -60,7 +60,6 @@ class HActionView extends HServerDB
     }
 
 
-
     protected function assign($key, $value)
     {
         $this->view->assign($key, $value);
@@ -75,7 +74,6 @@ class HActionView extends HServerDB
         return $this->view->fetch($tpl);
 
     }
-
 
 
 }
