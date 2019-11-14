@@ -52,7 +52,9 @@ php start.php reload
 #####项目架构
     
 ![AB测试](https://gitee.com/heixiaomas/HServer/raw/master/app/static/img/f.png)
-    
+
+#####路由规则
+
 
 #### 更新日志
 
