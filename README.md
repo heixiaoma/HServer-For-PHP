@@ -29,7 +29,7 @@ php start.php reload
 
 #### 编写代码
 
-#####目录介绍和启动测试
+##### 目录介绍和启动测试
 ```
 ├─app               #app是我们开发用最多的文件夹
 │  ├─action         #控制器编写目录
@@ -49,11 +49,11 @@ php start.php reload
     http://127.0.0.1:8800/index/html
 - 你将看到最基本的HelloWord
 
-#####项目架构
+##### 项目架构
     
 ![AB测试](https://gitee.com/heixiaomas/HServer/raw/master/app/static/img/f.png)
 
-#####路由规则
+##### 路由规则
 
 
 #### 更新日志
