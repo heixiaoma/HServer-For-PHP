@@ -2,7 +2,8 @@
 
 #### 介绍
 
-基于 Workerman 而做的一个高并发 WebServer。
+基于 Workerman 而做的一款高并发 WebServer。单机2G 4核 7W+QPS
+用他我们能干啥，做一个最求性能切功能简单的程序。麻雀虽小，但是以为我公司，完成短视频接口后台，口令后台的基本业务的程序支撑
 
 #### 运行方式
 
@@ -54,7 +55,32 @@ php start.php reload
 ![AB测试](https://gitee.com/heixiaomas/HServer/raw/master/app/static/img/f.png)
 
 ##### 路由规则
-
+    从app/action/开始进行规制计算
+    例子1：
+        app/action/index.php
+        index.php 里面有一个show()方法
+    url:
+        http://127.0.0.1/index/show
+##### 控制器Action编写规则
+    
+    1，文件必须必须放在/app/action/目录里面
+    2，该文件必须是一个类，同时继承HActionView类            
+    3， 父类有很多方法封装，可以直接使用
+        $Response，$Request，$DB,等等，具体看文件配置
+    
+##### 拦截器Filter编写规则     
+     1，文件必须必须放在/app/filter/目录里面
+     2，该文件必须是一个类，同时继承HServerFilter类     
+     4  $level级别定义 设置优先级，数字，越大，越先     
+     5， 父类有很多方法封装，可以直接使用
+         $Response，$Request，$DB,等等，具体看文件配置
+            
+##### 定时器task编写规则  
+    1，文件必须必须放在/app/task/目录里面
+    2，该文件必须是一个类，同时继承HServerTask类     
+    4 ,$time 延时定义单位秒   
+    5，父类有很多方法封装，可以直接使用
+        $DB,等等，具体看文件配置
 
 #### 更新日志
 
