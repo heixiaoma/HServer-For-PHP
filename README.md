@@ -29,11 +29,30 @@ php start.php reload
 
 #### 编写代码
 
-- 源代码全在 app 文件夹里面
-- 静态文件在 static 文件夹里面
-- 访问地址：  
+#####目录介绍和启动测试
+```
+├─app               #app是我们开发用最多的文件夹
+│  ├─action         #控制器编写目录
+│  ├─filter         #拦截器目录    
+│  ├─static         #静态文件目录
+│  ├─task           #定时任务目录
+│  └─view           #smart模板目录    
+├─HServer           #HServer核心逻辑
+├─log               #程序跑飞时产生的日志文件
+├─templates_c       #模板生成的缓存目录
+└─vendor            #框架库
+
+```
+- 更具平台对应启动HServer
+- 访问测试地址：  
     http://127.0.0.1:8800/index/main  
     http://127.0.0.1:8800/index/html
+- 你将看到最基本的HelloWord
+
+#####项目架构
+    
+![AB测试](https://gitee.com/heixiaomas/HServer/raw/master/app/static/img/f.png)
+    
 
 #### 更新日志
 
